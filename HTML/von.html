@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Cá Nhân - Từ Minh Von</title>
+    <link rel="stylesheet" href="/CSS/von.css">
+</head>
+<body>
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="profile-image">
+                <a href="/index.html"><img src="/IMG/nền von.jpg" alt="Profile Picture"></a>
+            </div>
+            <h1 class="name">Từ Minh Von</h1>
+            <p class="title">Web Developer & UI/UX Designer</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <button class="nav-btn active" onclick="showSection('about')">Giới Thiệu</button>
+            <button class="nav-btn" onclick="showSection('skills')">Kỹ Năng</button>
+            <button class="nav-btn" onclick="showSection('projects')">Dự Án</button>
+            <button class="nav-btn" onclick="showSection('hobbies')">Sở Thích</button>
+            <button class="nav-btn" onclick="showSection('contact')">Liên Hệ</button>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- About Section -->
+            <div class="section active" id="about">
+                <h2>Giới Thiệu</h2>
+                <div class="about-content">
+
+                    <p>Chào mọi người! Mình là Từ Minh Von, một chàng trai đến từ Bình Định – vùng đất của những bãi biển đẹp, võ thuật cổ truyền và tinh thần hiếu học. Hiện tại, mình đang theo học ngành Công nghệ Thông tin (CNTT) với đam mê trở thành một Lập trình viên Frontend trong tương lai gần.</p>
+
+                    <p> Đôi nét về mình:</p>
+
+                        <p>-Quê quán: Bình Định – nơi mình tự hào về văn hóa và con người chất phác, kiên cường.</p>
+
+                        <p>-Học vấn: Sinh viên CNTT tại Trường Đại học Giao Thông Vận Tải Thành Phố Hồ Chí m, đang tập trung vào các môn liên quan đến lập trình, thiết kế giao diện và trải nghiệm người dùng.</p>
+
+                        <p> -Mục tiêu: Trở thành một Frontend Developer chuyên nghiệp, tạo ra những sản phẩm web/app đẹp mắt, tối ưu và thân thiện với người dùng.</p>
+                    
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="section" id="skills">
+                <h2>Kỹ Năng</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <span class="skill-icon">💻</span>
+                        <div class="skill-name">Frontend Development</div>
+                        <div class="skill-desc">HTML5, CSS3, JavaScript, React, Vue.js</div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">🎨</span>
+                        <div class="skill-name">UI/UX Design</div>
+                        <div class="skill-desc">Figma, Adobe XD, Photoshop, Wireframing</div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">⚙️</span>
+                        <div class="skill-name">Backend Development</div>
+                        <div class="skill-desc">Node.js, Python, MongoDB, MySQL</div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">📱</span>
+                        <div class="skill-name">Mobile Development</div>
+                        <div class="skill-desc">React Native, Flutter, Responsive Design</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="section" id="projects">
+                <h2>Dự Án</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="/IMG/dự án von (1).jpg" alt="quản lí đang kí học phần ">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link">🔗 Demo</a>
+                                    <a href="#" class="project-link">📝 Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Phần mềm quản lí đăng kí học phần</h3>
+                            <p class="project-desc">Phần mềm cập nhập đầy đủ tính năng thêm xóa sửa cập nhật được thực hiện bởi nhân viên.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="/IMG/dự án 2 von (1).jpg" alt="App quản lí chi tiêu">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link">🔗 Demo</a>
+                                    <a href="#" class="project-link">📝 Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">App quản lí chi tiêu</h3>
+                            <p class="project-desc">App quản lí chi thu hàng tháng báo cáo chi thu.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="/IMG/dự án 4 von.jpg" alt="Đá bóng">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link">🔗 Demo</a>
+                                    <a href="#" class="project-link">📝 Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title"></h3>
+                            <p class="project-desc"></p>
+                            <div class="project-tech">
+                                <span class="tech-tag"></span>
+                                <span class="tech-tag"></span>
+                                <span class="tech-tag"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-image">
+                            <img src="/IMG/dự án 3 von.png" alt="app cafe">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link">🔗 Demo</a>
+                                    <a href="#" class="project-link">📝 Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Trang Web Cafe</h3>
+                            <p class="project-desc">Một web cafe tích hợp bán hàng onl line. Khách hàng có thể kham khảo đặt hàng trực tiếp trên web.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">D3.js</span>
+                                <span class="tech-tag">HTML,CSS</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hobbies Section -->
+            <div class="section" id="hobbies">
+                <h2>Sở Thích</h2>
+                <div class="hobbies-grid">
+                    <div class="hobby-item">
+                        <div class="hobby-icon">📚</div>
+                        <h3 class="hobby-title">Đọc Sách</h3>
+                        <p class="hobby-desc">Đam mê đọc sách công nghệ, self-help và tiểu thuyết khoa học viễn tưởng. Mỗi tuần đọc ít nhất 2-3 cuốn sách.</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-icon">🎮</div>
+                        <h3 class="hobby-title">Game</h3>
+                        <p class="hobby-desc">Thích chơi game cùng bạn bè.</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-icon">📸</div>
+                        <h3 class="hobby-title">Nhiếp Ảnh</h3>
+                        <p class="hobby-desc">Yêu thích chụp ảnh phong cảnh và street photography. Thường xuyên khám phá các địa điểm mới để chụp ảnh.</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-icon">🏍️</div>
+                        <h3 class="hobby-title">Xe máy </h3>
+                        <p class="hobby-desc">Thích chơi xe dọn xe. Đam mê đi du lịch với gia đình bạn bè.</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-icon">🎵</div>
+                        <h3 class="hobby-title">Âm Nhạc</h3>
+                        <p class="hobby-desc">Cực kì thích nghe nhạc buồn. Ca sĩ yêu thích là Quân Ap, Jack, Sơn Tùng MTP.</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-icon">&#x26BD</div>
+                        <h3 class="hobby-title">Đá bóng</h3>
+                        <p class="hobby-desc">Là một người cực kì đam mê thể thao đặc biệt là bóng đá. Có thể một tuần đá 7 trận.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="contact">
+                <h2>Liên Hệ</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div class="contact-text">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">Tuminhvon12052005@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div class="contact-text">
+                            <span class="contact-label">Điện Thoại</span>
+                            <span class="contact-value">+84 342475759</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div class="contact-text">
+                            <span class="contact-label">Địa Chỉ</span>
+                            <span class="contact-value">TP. Hồ Chí Minh, Việt Nam</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💼</span>
+                        <div class="contact-text">
+                            <span class="contact-label">LinkIn</span>
+                            <span class="contact-value">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/von.tuminh" class="social-link"><span>📘</span></a>
+                    <a href="https://www.instagram.com/tuu_min_won?igsh=MXVkdzAwdG5mZTE0cw%3D%3D&utm_source=qr" class="social-link"><span>📷</span></a>                
+                    <a href="https://github.com/tuminhvon123" class="social-link"><span>💼</span></a>
+                    <a href="tuminhvon12052005@gmail.com" class="social-link"><span>📧</span></a>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/JS/von.js"></script>
+</body>
+</html>
