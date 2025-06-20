@@ -5,7 +5,7 @@ body {
     width: 100%;
     align-items: center;
     justify-content: flex-start;
-    background: url(/IMG/home\ bgr.jpg) no-repeat center center/cover;
+    background: url(../IMG/home\ bgr.jpg) no-repeat center center/cover;
     background-color: #1a1e2e; /* Fallback color */
     margin: 0;
     padding: 20px;
