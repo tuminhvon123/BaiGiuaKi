@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +6,14 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px; /* Giảm font-size mặc định để phù hợp hơn */
+    font-size: 16px;
 }
 
 body {
     background: linear-gradient(135deg, #0f141c06 0%, #1a252f35 100%);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
@@ -32,73 +33,78 @@ body::after {
 }
 
 img {
-    width: 100%; /* Đảm bảo hình ảnh sử dụng toàn bộ không gian của container */
+    width: 100%;
     height: auto;
-    object-fit: contain; /* Giữ tỷ lệ hình ảnh */
+    object-fit: contain;
 }
 
 .container {
     display: flex;
-    width: 100vw; /* Sử dụng toàn bộ chiều rộng màn hình */
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
 }
 
 .side_bar {
-    width: 20%; /* Giảm tỷ lệ sidebar để nhường không gian cho main */
+    width: 20%;
     background: linear-gradient(180deg, #171B22 0%, #1A252F 100%);
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 20px; /* Giảm padding để tối ưu không gian */
+    padding: 30px 20px;
     transition: transform 0.3s ease;
+    position: sticky;
+    top: 0;
 }
 
 .side_bar:hover {
-    transform: scale(1.01); /* Giảm hiệu ứng scale để nhẹ nhàng hơn */
+    transform: scale(1.01);
 }
 
 .profile_img {
-    width: 200px; /* Kích thước hợp lý cho ảnh hồ sơ */
-    height: 200px;
-    overflow: visible; /* Đổi từ hidden sang visible để đảm bảo ảnh không bị cắt */
+    width: 100px;
+    height: 100px;
+    overflow: visible;
     border-radius: 50%;
     border: 5px solid #FF759C;
     box-shadow: 0px 0px 50px rgba(255, 117, 156, 0.4);
     transition: transform 0.3s ease;
-    display: flex; /* Đảm bảo ảnh căn giữa */
+    display: flex;
     justify-content: center;
     align-items: center;
-    background: #171B22; /* Fallback background nếu ảnh không tải được */
+    background: #171B22;
 }
 
 .profile_img:hover img {
-    transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+    transform: scale(1.1);
 }
+
 .profile_img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không méo */
-    border-radius: 50%; /* Giữ hình tròn */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
     transition: transform 0.3s ease;
-    display: block; /* Đảm bảo ảnh là block element */
+    display: block;
 }
 
 .profile_det {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .profile_det h2 {
-    font-size: 1.8rem; /* Giảm kích thước font */
+    font-size: 1.0rem;
     font-weight: 700;
     color: #00CC97;
     text-transform: uppercase;
+
+
 }
 
 .typed_text {
-    font-size: 1rem;
+    font-size: 0.5rem;
     color: #FFDB59;
     margin-top: 10px;
 }
@@ -115,13 +121,13 @@ img {
 .social_icon {
     display: flex;
     gap: 15px;
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 .social_icon i {
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
+    font-size: 0.8rem;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     display: flex;
@@ -140,11 +146,11 @@ img {
 
 .side_menu {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .side_menu li {
-    padding: 15px;
+    padding: 10px;
     border-top: 1px solid rgba(131, 131, 131, 0.2);
     display: flex;
     align-items: center;
@@ -152,7 +158,7 @@ img {
 }
 
 .side_menu i {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .side_menu li:hover {
@@ -161,7 +167,7 @@ img {
 
 .side_menu li a {
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.5rem;
     margin-left: 10px;
     transition: color 0.3s ease;
 }
@@ -172,7 +178,7 @@ img {
 
 .download_btn {
     width: 200px;
-    height: 50px;
+    height: 100px;
     background-color: #0F141C;
     border-radius: 10px;
     display: flex;
@@ -181,13 +187,13 @@ img {
     gap: 10px;
     cursor: pointer;
     position: relative;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .download_btn i {
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -204,6 +210,7 @@ img {
     color: #fff;
     font-size: 1rem;
     padding-left: 20%;
+    width: 200px;
     transition: 0.6s ease;
 }
 
@@ -216,8 +223,8 @@ img {
 }
 
 main {
-    width: 80%; /* Tăng tỷ lệ main để sử dụng không gian hiệu quả */
-    height: 100%;
+    width: 80%;
+    height: auto;
     background: #0F141C;
     overflow-y: auto;
     padding: 40px;
@@ -246,7 +253,7 @@ main {
     font-size: 3.5rem;
     line-height: 1.2;
     color: #00CC97;
-    text-shadow: 0 0 10px rgba(0, 204, 151, 0.4);
+    text-shadow: 10px 8px 10px rgba(0, 204, 151, 0.4);
 }
 
 .hero_text {
@@ -373,7 +380,7 @@ button a {
 .slide-track {
     display: flex;
     align-items: center;
-    width: calc(150px * 32); /* Giảm số lượng slide để tối ưu hiệu suất */
+    width: calc(150px * 32);
     animation: scrolls 30s linear infinite;
 }
 
@@ -387,12 +394,11 @@ button a {
 }
 
 @keyframes scrolls {
-    width 0% {
+    0% {
         transform: translateX(0);
     }
-
     100% {
-        transform: translateX(calc(-150px * 16)); /* Điều chỉnh để phù hợp với số slide */
+        transform: translateX(calc(-150px * 16));
     }
 }
 
@@ -403,12 +409,14 @@ button a {
     background: rgba(0, 20, 20, 0.2);
     border-radius: 15px;
     margin-bottom: 2rem;
-    box-shadow: 2px 4px 20px rgba(36, 186, 171, 0.2);}
+    box-shadow: 2px 4px 20px rgba(36, 186, 171, 0.2);
+}
 
 .about h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #FF759C;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .about p {
@@ -456,7 +464,7 @@ button a {
 }
 
 .resume h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #FF759C;
     margin-bottom: 20px;
 }
@@ -478,7 +486,7 @@ button a {
 }
 
 .resume-section div:hover {
-    transform: translateY(-8px);
+    transform: skew(10deg,20deg);
 }
 
 .resume-section h3 {
@@ -513,7 +521,7 @@ button a {
 }
 
 .coding_skills .headings h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #FF759C;
     margin-bottom: 20px;
 }
@@ -580,7 +588,7 @@ button a {
 }
 
 .skills-section h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: #FF759C;
     margin-bottom: 20px;
     text-align: center;
@@ -641,7 +649,7 @@ button a {
 }
 
 .awards h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #FF759C;
     margin-bottom: 20px;
 }
@@ -661,7 +669,8 @@ button a {
 }
 
 .awards-grid div:hover {
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
+    transform: skew(10deg, 20deg);
     background: #1E252D;
 }
 
@@ -685,7 +694,7 @@ button a {
 }
 
 .hobbies h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #FF759C;
     margin-bottom: 1rem;
 }
@@ -698,17 +707,16 @@ button a {
 
 .hobby-card {
     background: #171B22;
-    padding: #A3A3;
-    color: #333;
+    padding: 15px;
     border-radius: 10px;
     transition: 0.3s ease;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
 .hobby-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0,0,0.3);
+    transform: rotate(360deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hobby-card h3 {
@@ -719,7 +727,7 @@ button a {
 
 .hobby-card p {
     font-size: 1rem;
-    background-color: #A3A3A3;
+    color: #A3A3A3;
     line-height: 1.6;
 }
 
@@ -766,7 +774,7 @@ button a {
 }
 
 .portfolio h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #FF759C;
     margin-bottom: 20px;
 }
@@ -793,7 +801,7 @@ button a {
 .portfolio-item img {
     border-radius: 10px;
     transition: transform 0.3s ease;
-    height: 300px; /* Giảm kích thước ảnh portfolio */
+    height: 300px;
     width: 100%;
     object-fit: cover;
 }
@@ -837,7 +845,7 @@ button a {
 }
 
 .contact h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #FF759C;
     margin-bottom: 20px;
 }
@@ -846,6 +854,7 @@ button a {
     font-size: 1.1rem;
     color: #A3A3A3;
     margin-bottom: 20px;
+
 }
 
 .contact-form {
@@ -874,7 +883,8 @@ button a {
 }
 
 .contact-form button {
-    width: 200px;
+    width: 150px;
+    height: 50px;
     margin: 0 auto;
     background: linear-gradient(90deg, #00CC97, #FF759C);
     border: none;
@@ -904,15 +914,17 @@ button a {
     margin-top: 2rem;
     border-top: 1px solid rgba(131, 131, 131, 0.2);
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    max-width: 1400px; /* Tăng max-width cho màn hình lớn */
+    max-width: 1400px;
     margin: 0 auto;
     flex-wrap: wrap;
     gap: 20px;
+    height: 1px;
 }
 
 .footer-section {
@@ -929,6 +941,7 @@ button a {
 .footer-section p {
     font-size: 1rem;
     margin-bottom: 8px;
+    text-align: center;
 }
 
 .social-icons {
@@ -940,6 +953,7 @@ button a {
     font-size: 1.5rem;
     color: #FF759C;
     transition: all 0.3s ease;
+
 }
 
 .social-icons a:hover {
@@ -947,82 +961,46 @@ button a {
     transform: scale(1.2);
 }
 
-/* Media query cho màn hình lớn (>1920px) */
-@media (min-width: 1920px) {
-    .container {
-        max-width: 1800px; /* Giới hạn chiều rộng tối đa để tránh quá rộng */
-        margin: 0 auto;
-    }
-
+@media (min-width: 1200px) and (min-resolution: 1dppx) {
     .side_bar {
-        width: 18%;
+        width: 20%;
+        min-width: 250px;
     }
 
     main {
-        width: 82%;
-        padding: 60px;
-    }
-
-    .content h1 {
-        font-size: 4rem;
-    }
-
-    .about-details div,
-    .resume-section div {
-        width: 25%;
-    }
-
-    .skill-container {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .portfolio-item img {
-        height: 400px;
+        width: 80%;
     }
 }
 
-/* Media query cho màn hình nhỏ hơn */
 @media (max-width: 1200px) {
     .container {
         flex-direction: column;
         height: auto;
-        width: 100vw;
     }
 
     .side_bar {
         width: 100%;
         height: auto;
+        position: relative;
         padding: 20px;
     }
 
     main {
         width: 100%;
-        padding: 30px;
-    }
-
-    .hero {
-        flex-direction: column;
-        padding: 8% 2%;
-    }
-
-    .content,
-    .hero_img {
-        width: 100%;
-    }
-
-    .hero_img {
-        margin-top: 20px;
-    }
-
-    .about-details div,
-    .resume-section div,
-    .awards-grid,
-    .hobbies-grid {
-        width: 45%;
+        padding: 20px;
     }
 }
 
 @media (max-width: 768px) {
+    .side_bar {
+        width: 100%;
+        height: auto;
+    }
+
+    .side_menu li a {
+        font-size: 0.9rem;
+    }
+
     .content h1 {
         font-size: 2.5rem;
     }
@@ -1050,5 +1028,38 @@ button a {
 
     .social-icons {
         justify-content: center;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+
+    .side_bar {
+        width: 18%;
+    }
+
+    main {
+        width: 82%;
+        padding: 60px;
+    }
+
+    .content h1 {
+        font-size: 4rem;
+    }
+
+    .about-details div,
+    .resume-section div {
+        width: 25%;
+    }
+
+    .skill-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .portfolio-item img {
+        height: 400px;
     }
 }
